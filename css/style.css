@@ -1,0 +1,51 @@
+body {
+  background-color: rgba(143, 188, 143, 0.726);
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  text-align: center;
+  text-decoration: underline;
+}
+h3{
+  text-align: center;
+  text-decoration: underline;
+}
+img {
+  padding-left: 33%;
+  padding-right: 33%;
+}
+.poster-4 {
+  padding-left: 25%;
+}
+.poster-5 {
+  padding-left: 37%;
+}
+.list {
+  font-style: italic;
+}
+.note {
+  text-decoration: line-through;  
+}
+header {
+  background-color: black;
+}
+.part-1 {
+  background-color: rgba(108, 170, 139, 0.726);
+}
+.part-2 {
+  background-color: rgba(105, 109, 108, 0.301);
+}
+.part-3 {
+  background-color: rgb(111, 176, 187);
+}
+.part-4 {
+  background-color: rgb(119, 165, 119);
+}
+.part-5 {
+  background-color: rgba(52, 117, 109, 0.459);
+}
+.scroll {
+  position: fixed;
+  right: 5px;
+}
