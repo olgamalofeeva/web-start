@@ -20,5 +20,5 @@ gulp.task('browser-sync', function() {
 gulp.task('min', () => {
   return gulp.src('./css/*.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('demo/css'));
 });
