@@ -1,6 +1,7 @@
 const {src, dest, watch} = require('gulp'),
       browserSync = require('browser-sync').create(),
-      sass = require('gulp-sass');
+      sass = require('gulp-sass'),
+      autoprefixer = require('gulp-autoprefixer');
 
 // новый плагин автоматическое обновление html страницы 
 function bs() {
@@ -19,6 +20,9 @@ function bs() {
 function serveSass() {
   return src("./sass/*.sass")
       .pipe(sass())
+      .pipe(autoprefixer({
+        cascade: false
+    }))
       .pipe(dest("./css"))
       .pipe(browserSync.stream());
 };
