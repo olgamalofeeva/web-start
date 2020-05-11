@@ -320,7 +320,8 @@ template {
 
 .container {
   max-width: 1256px;
-  margin: auto; }
+  margin: auto;
+  margin-left: 4.28rem; }
 
 .button {
   padding: 13px 20px;
@@ -444,8 +445,8 @@ body {
     align-items: center;
     left: 0;
     bottom: 0;
-    min-width: 247px;
-    min-height: 97px;
+    min-width: 17.6rem;
+    min-height: 6.92rem;
     background-color: #131313;
     color: #ffffff;
     text-transform: uppercase; }
@@ -493,4 +494,42 @@ body {
 
 @media screen and (max-width: 1200px) {
   html {
-    font-size: 12px; } }
+    font-size: 12px; }
+  .nav__item {
+    margin-right: 1 rem; } }
+
+@media screen and (max-width: 992px) {
+  .nav {
+    display: none; }
+  .hero__instagram {
+    display: none; }
+  .hero__content {
+    margin: 0; }
+  .container {
+    margin-left: 0; } }
+
+@media screen and (max-width: 570px) {
+  .contacts__phone {
+    margin-right: 0;
+    color: #ffffff;
+    text-decoration: none; }
+  .contacts__button {
+    display: none; }
+  .title {
+    font-size: 1.64rem; }
+  .hero__content {
+    max-width: 22.86rem; }
+  .hero__text {
+    font-size: 1.29rem;
+    margin-bottom: 2.28rem; }
+  .hero__button {
+    min-width: 22.86rem;
+    margin-bottom: 1.85rem; }
+  .hero__scroll-down {
+    display: none; }
+  .container {
+    margin-left: 0; } }
+
+@media screen and (max-height: 570px) {
+  .hero__scroll-down {
+    display: none; } }
