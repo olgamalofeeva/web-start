@@ -319,9 +319,9 @@ template {
   display: none; }
 
 .container {
+  width: 85%;
   max-width: 1256px;
-  margin: auto;
-  margin-left: 4.28rem; }
+  margin: auto; }
 
 .button {
   padding: 11px 24px;
@@ -353,22 +353,28 @@ body {
   font-family: 'Futura Book', sans-serif;
   font-size: 1rem; }
 
-.section-title {
-  text-align: center;
-  text-transform: uppercase;
-  font-family: 'Yeseva One', cursive; }
-  .section-title__heading {
-    font-size: 20px; }
-  .section-title__image {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .section-title__image::after, .section-title__image::before {
-      content: '';
-      width: 32px;
-      height: 2px;
-      background-color: #E3B873;
-      margin: 0 10px; }
+img {
+  max-width: 100%; }
+
+.section {
+  padding: 60px 0; }
+  .section-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Yeseva One', cursive; }
+    .section-title__heading {
+      font-size: 20px;
+      margin-bottom: 1rem; }
+    .section-title__image {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .section-title__image::after, .section-title__image::before {
+        content: '';
+        width: 32px;
+        height: 2px;
+        background-color: #E3B873;
+        margin: 0 10px; }
 
 .header {
   position: fixed;
@@ -412,7 +418,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   padding-top: 100px;
   background: #131313 url(../img/hero-bg.jpg) no-repeat center;
   background-size: cover;
@@ -428,8 +434,7 @@ body {
     top: 0; }
   .hero__content {
     position: relative;
-    max-width: 45rem;
-    margin-left: 4.28rem; }
+    max-width: 45rem; }
   .hero__title {
     margin-bottom: 1.1rem; }
   .hero__text {
@@ -460,7 +465,8 @@ body {
     color: #ffffff;
     font-family: 'Yeseva One', cursive;
     font-size: 0.85rem;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-decoration: none; }
     .hero__scroll-down::after {
       content: '';
       width: 29px;
@@ -504,6 +510,58 @@ body {
   .title--primary {
     color: #E3B873; }
 
+.types .section-title {
+  margin-bottom: 2.2rem; }
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+
+.col {
+  flex-basis: 32%; }
+
+.card__text {
+  position: relative;
+  background-color: #ffffff;
+  max-width: 23.6rem;
+  margin: 0 auto;
+  margin-top: -9rem;
+  padding: 0.5rem 2.14rem 1.79rem 2.14rem;
+  box-shadow: 10px 10px 20px rgba(19, 19, 19, 0.03); }
+
+.card__title {
+  font-size: 1.285rem;
+  line-height: 1.785rem;
+  font-family: 'Yeseva One', cursive; }
+
+.card__list {
+  margin: 0;
+  padding: 0;
+  margin-left: 1rem;
+  margin-bottom: 2rem; }
+
+.card__item {
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  color: #959595; }
+
+.card__pricetag {
+  font-size: 1.29rem;
+  font-family: 'Yeseva One', cursive;
+  text-transform: uppercase;
+  background-color: #E3B873;
+  color: #ffffff;
+  padding: 1rem 2.7rem;
+  min-width: 17rem;
+  max-height: 3.857rem;
+  position: absolute;
+  left: 0;
+  bottom: -1.9rem; }
+
+.card__image {
+  max-width: 100%; }
+
 @media screen and (max-width: 1200px) {
   html {
     font-size: 12px; }
@@ -516,13 +574,10 @@ body {
   .hero__instagram {
     display: none; }
   .hero__content {
-    margin: 0; }
-  .container {
-    margin-left: 0; } }
+    margin: 0; } }
 
 @media screen and (max-width: 570px) {
   .contacts__phone {
-    margin-right: 0;
     color: #ffffff;
     text-decoration: none; }
   .contacts__button {
@@ -538,10 +593,17 @@ body {
     min-width: 22.86rem;
     margin-bottom: 1.85rem; }
   .hero__scroll-down {
-    display: none; }
-  .container {
-    margin-left: 0; } }
+    display: none; } }
 
 @media screen and (max-height: 570px) {
   .hero__scroll-down {
     display: none; } }
+
+@media screen and (max-width: 760px) {
+  .row {
+    flex-direction: column;
+    align-items: center; }
+  .types__card {
+    margin-bottom: 5rem; }
+  .types__text {
+    padding-left: 0; } }
