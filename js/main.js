@@ -11,4 +11,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
   closeBtn.addEventListener('click', switchModal);
+
+  if (key == 27) {
+    modalBtn.forEach(element => {
+      element.addEventListener('click', switchModal);
+    });
+    closeBtn.addEventListener('click', switchModal);
+  }
+
 });
