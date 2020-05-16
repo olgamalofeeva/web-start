@@ -49,7 +49,7 @@
       border-radius: 1px
       cursor: pointer
       margin-right: 0.64rem
-  .section
+.section
   padding: 60px 0 
   &-title
     text-align: center
@@ -74,6 +74,28 @@
     line-height: 1.928rem
     color: $grey
     margin-bottom: 2.857rem
+.scroll-up
+  display: inline-block
+  position: fixed
+  bottom: 2.5rem
+  right: 2.5rem
+  margin: 2rem
+  width: 3rem
+  height: 3rem
+  border: 2px solid $primary
+  border-radius: 50%
+  background: url(../img/scroll-up.svg) no-repeat center
+  transition: background-color .3s, opacity .5s, visibility .5s
+  z-index: 1000
+  opasity: 0
+  visibility: hidden
+  &--show
+    opasity: 1
+    visibility: visible
+  &:hover
+    cursor: pointer
+  
+
 
 
 

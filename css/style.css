@@ -369,47 +369,70 @@ template {
     color: #ffffff;
     font-size: 1.285rem; }
 
-.policy {
+.policy__checkbox {
+  opacity: 0;
+  visibility: hidden; }
+  .policy__checkbox:checked + .policy__label::before {
+    background: #E3B873 url("../img/check.svg") no-repeat center/0.8rem; }
+
+.policy__label {
+  display: flex;
+  align-items: center; }
+  .policy__label::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    border: 1px solid #E3B873;
+    border-radius: 1px;
+    cursor: pointer;
+    margin-right: 0.64rem; }
+
+.section {
   padding: 60px 0; }
-  .policy__checkbox {
-    opacity: 0;
-    visibility: hidden; }
-    .policy__checkbox:checked + .policy__label::before {
-      background: #E3B873 url("../img/check.svg") no-repeat center/0.8rem; }
-  .policy__label {
-    display: flex;
-    align-items: center; }
-    .policy__label::before {
-      content: '';
-      width: 18px;
-      height: 18px;
-      border: 1px solid #E3B873;
-      border-radius: 1px;
-      cursor: pointer;
-      margin-right: 0.64rem; }
-  .policy-title {
+  .section-title {
     text-align: center;
     text-transform: uppercase;
     font-family: 'Yeseva One', cursive; }
-    .policy-title__heading {
+    .section-title__heading {
       font-size: 20px;
       margin-bottom: 1rem; }
-    .policy-title__image {
+    .section-title__image {
       display: flex;
       justify-content: center;
       align-items: center; }
-      .policy-title__image::after, .policy-title__image::before {
+      .section-title__image::after, .section-title__image::before {
         content: '';
         width: 32px;
         height: 2px;
         background-color: #E3B873;
         margin: 0 10px; }
-  .policy-subtitle {
+  .section-subtitle {
     font-size: 1.428rem;
     text-align: center;
     line-height: 1.928rem;
     color: #363636;
     margin-bottom: 2.857rem; }
+
+.scroll-up {
+  display: inline-block;
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  margin: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid #E3B873;
+  border-radius: 50%;
+  background: url(../img/scroll-up.svg) no-repeat center;
+  transition: background-color .3s, opacity .5s, visibility .5s;
+  z-index: 1000;
+  opasity: 0;
+  visibility: hidden; }
+  .scroll-up--show {
+    opasity: 1;
+    visibility: visible; }
+  .scroll-up:hover {
+    cursor: pointer; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
