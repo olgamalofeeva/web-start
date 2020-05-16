@@ -11,4 +11,9 @@ $(document).ready(function () {
   closeBtn.on('click', function () {
     modal.toggleClass('modal--visible');
   });
+  $(document).keypress(function (e) {
+    if (e.keyCode == 27) {
+      modal.toggleClass('modal--visible');
+    }
+});
 });
