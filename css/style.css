@@ -389,13 +389,35 @@ template {
 
 .section {
   padding: 60px 0; }
+  .section--dark {
+    min-height: 34.5rem;
+    width: 100%;
+    background: #131313;
+    margin: 0;
+    padding: 6.142rem 0 6.542rem; }
   .section-title {
-    text-align: center;
     text-transform: uppercase;
     font-family: 'Yeseva One', cursive; }
     .section-title__heading {
-      font-size: 20px;
+      text-align: center;
+      font-size: 1.428rem;
       margin-bottom: 1rem; }
+    .section-title__primary {
+      font-size: 1.928rem;
+      color: #E3B873;
+      margin: 0;
+      width: 20.07rem;
+      line-height: 2.642rem;
+      letter-spacing: -0.07em; }
+      .section-title__primary::after {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: 6.57rem;
+        height: 0.142rem;
+        background-color: #E3B873;
+        margin: 0;
+        margin-left: 2.14rem; }
     .section-title__image {
       display: flex;
       justify-content: center;
@@ -406,12 +428,17 @@ template {
         height: 2px;
         background-color: #E3B873;
         margin: 0 10px; }
-  .section-subtitle {
+  .section-subtitle__heading {
     font-size: 1.428rem;
     text-align: center;
     line-height: 1.928rem;
     color: #363636;
     margin-bottom: 2.857rem; }
+  .section-subtitle__projects {
+    font-size: 1.285rem;
+    line-height: 2.07rem;
+    color: #ffffff;
+    margin-bottom: 3rem; }
 
 .scroll-up {
   display: inline-block;
@@ -504,6 +531,11 @@ img {
     background-color: rgba(19, 19, 19, 0.7);
     left: 0;
     top: 0; }
+  .hero::after {
+    content: '';
+    height: 3.46rem;
+    width: 100%;
+    background-color: #131313; }
   .hero__content {
     position: relative;
     max-width: 45rem; }
@@ -582,7 +614,7 @@ img {
   .title--primary {
     color: #E3B873; }
 
-.types__section-title {
+.types__section-title, .design__section-title {
   margin-bottom: 2.2rem; }
 
 .row {
@@ -633,6 +665,34 @@ img {
 
 .card__image {
   max-width: 100%; }
+
+.projects {
+  display: flex;
+  justify-content: space-between;
+  align-items: start; }
+  .projects__content {
+    width: 31.57rem; }
+
+.block {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 31.57rem; }
+  .block__item {
+    margin-right: 3rem;
+    margin-bottom: 2.428rem; }
+    .block__item--city {
+      margin-right: 7.5rem; }
+  .block__title {
+    text-transform: uppercase;
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.285rem;
+    color: #E3B873;
+    margin: 0;
+    margin-bottom: 0.642rem; }
+  .block__subtitle {
+    font-size: 1.07rem;
+    color: #ffffff;
+    line-height: 1.428rem; }
 
 .modal {
   opasity: 0;
