@@ -58,50 +58,55 @@
     margin: 0
     padding: 6.142rem 0 6.542rem
   &-title
-    text-transform: uppercase
-    font-family: 'Yeseva One', cursive
-    &__heading 
+    &--left
+      text-align: left
+    &--center
       text-align: center
+    &__heading 
+      text-transform: uppercase
+      font-family: 'Yeseva One', cursive
       font-size: 1.428rem
       margin-bottom: 1rem
-    &__primary
-      font-size: 1.928rem
-      color: $primary
-      margin: 0
-      width: 20.07rem
-      line-height: 2.642rem
-      letter-spacing: -0.07em
-      &::after
-        content: ''
-        display: inline-block
-        vertical-align: middle
-        width: 6.57rem
-        height: 0.142rem
-        background-color: $primary
+      &--primary
+        font-size: 1.928rem
+        color: $primary
         margin: 0
-        margin-left: 2.14rem
+        width: 20.07rem
+        line-height: 2.642rem
+        letter-spacing: -0.07em
+        &::after
+          content: ''
+          display: inline-block
+          vertical-align: middle
+          width: 6.57rem
+          height: 0.142rem
+          background-color: $primary
+          margin: 0
+          margin-left: 2.14rem
+    &__text
+      &--design
+        font-size: 1.428rem
+        text-align: center
+        line-height: 1.928rem
+        color: $grey
+        margin-bottom: 2.857rem
+      &--projects
+        font-size: 1.285rem
+        line-height: 2.07rem
+        color: $light
+        margin-bottom: 3rem
+        max-width: 31.57rem
     &__image
       display: flex
       justify-content: center
       align-items: center
+      margin-bottom: 2.2rem
       &::after, &::before
         content: ''
         width: 32px
         height: 2px
         background-color: $primary
         margin: 0 10px
-  &-subtitle
-    &__heading
-      font-size: 1.428rem
-      text-align: center
-      line-height: 1.928rem
-      color: $grey
-      margin-bottom: 2.857rem
-    &__projects
-      font-size: 1.285rem
-      line-height: 2.07rem
-      color: $light
-      margin-bottom: 3rem
       
 .scroll-up
   display: inline-block

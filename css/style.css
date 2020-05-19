@@ -323,6 +323,23 @@ template {
   max-width: 1256px;
   margin: auto; }
 
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+
+.col-30 {
+  flex-basis: 32%; }
+
+.col-50 {
+  flex-basis: 50%; }
+
+.swiper-container--text {
+  width: 31.83rem;
+  height: auto;
+  margin: 0;
+  margin-right: 10rem; }
+
 .button {
   padding: 11px 24px;
   border: none;
@@ -395,21 +412,23 @@ template {
     background: #131313;
     margin: 0;
     padding: 6.142rem 0 6.542rem; }
-  .section-title {
+  .section-title--left {
+    text-align: left; }
+  .section-title--center {
+    text-align: center; }
+  .section-title__heading {
     text-transform: uppercase;
-    font-family: 'Yeseva One', cursive; }
-    .section-title__heading {
-      text-align: center;
-      font-size: 1.428rem;
-      margin-bottom: 1rem; }
-    .section-title__primary {
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.428rem;
+    margin-bottom: 1rem; }
+    .section-title__heading--primary {
       font-size: 1.928rem;
       color: #E3B873;
       margin: 0;
       width: 20.07rem;
       line-height: 2.642rem;
       letter-spacing: -0.07em; }
-      .section-title__primary::after {
+      .section-title__heading--primary::after {
         content: '';
         display: inline-block;
         vertical-align: middle;
@@ -418,27 +437,29 @@ template {
         background-color: #E3B873;
         margin: 0;
         margin-left: 2.14rem; }
-    .section-title__image {
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      .section-title__image::after, .section-title__image::before {
-        content: '';
-        width: 32px;
-        height: 2px;
-        background-color: #E3B873;
-        margin: 0 10px; }
-  .section-subtitle__heading {
+  .section-title__text--design {
     font-size: 1.428rem;
     text-align: center;
     line-height: 1.928rem;
     color: #363636;
     margin-bottom: 2.857rem; }
-  .section-subtitle__projects {
+  .section-title__text--projects {
     font-size: 1.285rem;
     line-height: 2.07rem;
     color: #ffffff;
-    margin-bottom: 3rem; }
+    margin-bottom: 3rem;
+    max-width: 31.57rem; }
+  .section-title__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.2rem; }
+    .section-title__image::after, .section-title__image::before {
+      content: '';
+      width: 32px;
+      height: 2px;
+      background-color: #E3B873;
+      margin: 0 10px; }
 
 .scroll-up {
   display: inline-block;
@@ -617,14 +638,6 @@ img {
 .types__section-title, .design__section-title {
   margin-bottom: 2.2rem; }
 
-.row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between; }
-
-.col {
-  flex-basis: 32%; }
-
 .card__text {
   position: relative;
   background-color: #ffffff;
@@ -666,33 +679,53 @@ img {
 .card__image {
   max-width: 100%; }
 
-.projects {
-  display: flex;
-  justify-content: space-between;
-  align-items: start; }
-  .projects__content {
-    width: 31.57rem; }
-
-.block {
+.swiper-slide {
   display: flex;
   flex-wrap: wrap;
-  max-width: 31.57rem; }
-  .block__item {
-    margin-right: 3rem;
-    margin-bottom: 2.428rem; }
-    .block__item--city {
-      margin-right: 7.5rem; }
-  .block__title {
+  margin: 0; }
+  .swiper-slide__text {
+    flex-basis: 50%;
+    margin-bottom: 2.428rem;
+    padding-bottom: 2rem; }
+  .swiper-slide__heading {
     text-transform: uppercase;
     font-family: 'Yeseva One', cursive;
     font-size: 1.285rem;
+    line-height: 1.78rem;
     color: #E3B873;
-    margin: 0;
     margin-bottom: 0.642rem; }
-  .block__subtitle {
+  .swiper-slide__value {
     font-size: 1.07rem;
     color: #ffffff;
     line-height: 1.428rem; }
+
+.swiper-pagination-bullets {
+  width: auto; }
+
+.swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.3); }
+  .swiper-pagination-bullet-active {
+    background-color: #ffffff; }
+
+.swiper-button-prev, .swiper-button-next {
+  bottom: 0;
+  top: auto;
+  background-size: 42px;
+  width: 42px;
+  height: 14px; }
+  .swiper-button-prev::after, .swiper-button-next::after {
+    display: none; }
+
+.swiper-button-prev {
+  left: 0;
+  background: url("../img/arrow-prev.svg") no-repeat center; }
+
+.swiper-button-next {
+  background: url("../img/arrow-next.svg") no-repeat center; }
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  width: auto;
+  bottom: -2px; }
 
 .modal {
   opasity: 0;
