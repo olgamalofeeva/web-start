@@ -67,11 +67,10 @@
       font-family: 'Yeseva One', cursive
       font-size: 1.428rem
       margin-bottom: 1rem
-      &--primary
+      &--primary, &--activity
         font-size: 1.928rem
         color: $primary
         margin: 0
-        width: 20.07rem
         line-height: 2.642rem
         letter-spacing: -0.07em
         &::after
@@ -83,6 +82,13 @@
           background-color: $primary
           margin: 0
           margin-left: 2.14rem
+      &--activity
+         &::after
+           margin-left: 6rem
+           width: 6.57rem
+           height: 0.071rem
+      &--activity
+        margin-bottom: 6.57rem
     &__text
       &--design
         font-size: 1.428rem
@@ -96,6 +102,12 @@
         color: $light
         margin-bottom: 3rem
         max-width: 31.57rem
+      &--activity
+        font-size: 1.071rem
+        line-height: 1.5rem
+        color: $light
+        margin-bottom: 1.285rem
+        text-transform: uppercase
     &__image
       display: flex
       justify-content: center

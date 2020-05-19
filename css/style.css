@@ -329,16 +329,13 @@ template {
   justify-content: space-between; }
 
 .col-30 {
-  flex-basis: 32%; }
+  width: 32%; }
 
 .col-50 {
-  flex-basis: 50%; }
+  width: 50%; }
 
-.swiper-container--text {
-  width: 31.83rem;
-  height: auto;
-  margin: 0;
-  margin-right: 10rem; }
+.col-70 {
+  width: 70%; }
 
 .button {
   padding: 11px 24px;
@@ -421,14 +418,13 @@ template {
     font-family: 'Yeseva One', cursive;
     font-size: 1.428rem;
     margin-bottom: 1rem; }
-    .section-title__heading--primary {
+    .section-title__heading--primary, .section-title__heading--activity {
       font-size: 1.928rem;
       color: #E3B873;
       margin: 0;
-      width: 20.07rem;
       line-height: 2.642rem;
       letter-spacing: -0.07em; }
-      .section-title__heading--primary::after {
+      .section-title__heading--primary::after, .section-title__heading--activity::after {
         content: '';
         display: inline-block;
         vertical-align: middle;
@@ -437,6 +433,12 @@ template {
         background-color: #E3B873;
         margin: 0;
         margin-left: 2.14rem; }
+    .section-title__heading--activity::after {
+      margin-left: 6rem;
+      width: 6.57rem;
+      height: 0.071rem; }
+    .section-title__heading--activity {
+      margin-bottom: 6.57rem; }
   .section-title__text--design {
     font-size: 1.428rem;
     text-align: center;
@@ -449,6 +451,12 @@ template {
     color: #ffffff;
     margin-bottom: 3rem;
     max-width: 31.57rem; }
+  .section-title__text--activity {
+    font-size: 1.071rem;
+    line-height: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 1.285rem;
+    text-transform: uppercase; }
   .section-title__image {
     display: flex;
     justify-content: center;
@@ -635,50 +643,6 @@ img {
   .title--primary {
     color: #E3B873; }
 
-.types__section-title, .design__section-title {
-  margin-bottom: 2.2rem; }
-
-.card__text {
-  position: relative;
-  background-color: #ffffff;
-  max-width: 23.6rem;
-  margin: 0 auto;
-  margin-top: -9rem;
-  padding: 0.5rem 2.14rem 1.79rem 2.14rem;
-  box-shadow: 10px 10px 20px rgba(19, 19, 19, 0.03); }
-
-.card__title {
-  font-size: 1.285rem;
-  line-height: 1.785rem;
-  font-family: 'Yeseva One', cursive; }
-
-.card__list {
-  margin: 0;
-  padding: 0;
-  margin-left: 1rem;
-  margin-bottom: 2rem; }
-
-.card__item {
-  font-size: 1.1rem;
-  line-height: 1.8rem;
-  color: #959595; }
-
-.card__pricetag {
-  font-size: 1.29rem;
-  font-family: 'Yeseva One', cursive;
-  text-transform: uppercase;
-  background-color: #E3B873;
-  color: #ffffff;
-  padding: 1rem 2.7rem;
-  min-width: 17rem;
-  max-height: 3.857rem;
-  position: absolute;
-  left: 0;
-  bottom: -1.9rem; }
-
-.card__image {
-  max-width: 100%; }
-
 .swiper-slide {
   display: flex;
   flex-wrap: wrap;
@@ -726,6 +690,68 @@ img {
 .swiper-container-horizontal > .swiper-pagination-bullets {
   width: auto;
   bottom: -2px; }
+
+.types__section-title, .design__section-title {
+  margin-bottom: 2.2rem; }
+
+.card__text {
+  position: relative;
+  background-color: #ffffff;
+  max-width: 23.6rem;
+  margin: 0 auto;
+  margin-top: -9rem;
+  padding: 0.5rem 2.14rem 1.79rem 2.14rem;
+  box-shadow: 10px 10px 20px rgba(19, 19, 19, 0.03); }
+
+.card__title {
+  font-size: 1.285rem;
+  line-height: 1.785rem;
+  font-family: 'Yeseva One', cursive; }
+
+.card__list {
+  margin: 0;
+  padding: 0;
+  margin-left: 1rem;
+  margin-bottom: 2rem; }
+
+.card__item {
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  color: #959595; }
+
+.card__pricetag {
+  font-size: 1.29rem;
+  font-family: 'Yeseva One', cursive;
+  text-transform: uppercase;
+  background-color: #E3B873;
+  color: #ffffff;
+  padding: 1rem 2.7rem;
+  min-width: 17rem;
+  max-height: 3.857rem;
+  position: absolute;
+  left: 0;
+  bottom: -1.9rem; }
+
+.card__image {
+  max-width: 100%; }
+
+.swiper-slide__activity {
+  font-family: 'Yeseva One', cursive;
+  font-size: 1.285rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 1.57rem; }
+
+.swiper-slide__heading--activity {
+  font-size: 1.07rem;
+  line-height: 1.642rem; }
+
+.swiper-slide__text {
+  font-size: 1.07rem;
+  line-height: 1.785rem;
+  color: #ffffff;
+  width: 24.07rem;
+  margin: 0; }
 
 .modal {
   opasity: 0;
