@@ -6,6 +6,8 @@
   font-size: 0.93rem
   &:hover
     cursor: pointer
+    animation: tada
+    animation-duration: 2s
   &--primary
     background-color: $primary
     color: $light
@@ -62,6 +64,8 @@
       text-align: left
     &--center
       text-align: center
+    &--light
+      color: $light
     &__heading 
       text-transform: uppercase
       font-family: 'Yeseva One', cursive
@@ -81,7 +85,9 @@
           height: 0.142rem
           background-color: $primary
           margin: 0
-          margin-left: 2.14rem
+          margin-left: 2.2rem
+      &--primary
+        margin-bottom: 1.55rem
       &--activity
          &::after
            margin-left: 6rem
@@ -95,12 +101,12 @@
         text-align: center
         line-height: 1.928rem
         color: $grey
-        margin-bottom: 2.857rem
+        margin-bottom: 3rem
       &--projects
         font-size: 1.285rem
         line-height: 2.07rem
         color: $light
-        margin-bottom: 3rem
+        margin-bottom: 2.5rem
         max-width: 31.57rem
       &--activity
         font-size: 1.071rem
@@ -112,7 +118,7 @@
       display: flex
       justify-content: center
       align-items: center
-      margin-bottom: 2.2rem
+      margin-bottom: 1.5rem
       &::after, &::before
         content: ''
         width: 32px
@@ -140,6 +146,8 @@
     visibility: visible
   &:hover
     cursor: pointer
+.activity
+  margin-top: -38rem
   
 
   

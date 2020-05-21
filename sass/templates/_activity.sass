@@ -15,6 +15,40 @@
     color: $light
     width: 24.07rem
     margin: 0
+.content
+  display: flex
+  flex-wrap: wrap
+  justify-content: flex-start
+  min-width: 54.7rem
+  margin-top: 6.8rem
+  &__text
+    width: 9.07rem
+    margin-right: 10rem
+    &:last-of-type
+      margin-right: 0
+    
+  &__heading
+    font-family: 'Yeseva One', cursive
+    font-size: 1.071rem
+    color: $light
+    text-transform: uppercase
+    margin-bottom: 1.21rem
+    &::after
+      content: ''
+      width: 1.5rem
+      height: 0.1rem
+      background-color: $primary
+      position: absolute
+      margin-top: 1.25rem
+      margin-left: -1.4rem
+
+  &__value
+    font-size: 1.071rem
+    color: $light
+    margin-bottom: 2.57rem
+.row
+  &--activity
+    margin-top: 30rem
 
 
 

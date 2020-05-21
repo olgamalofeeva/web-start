@@ -344,7 +344,11 @@ template {
   text-transform: uppercase;
   font-size: 0.93rem; }
   .button:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    -webkit-animation: tada;
+    animation: tada;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s; }
   .button--primary {
     background-color: #E3B873;
     color: #ffffff;
@@ -413,6 +417,8 @@ template {
     text-align: left; }
   .section-title--center {
     text-align: center; }
+  .section-title--light {
+    color: #ffffff; }
   .section-title__heading {
     text-transform: uppercase;
     font-family: 'Yeseva One', cursive;
@@ -432,7 +438,9 @@ template {
         height: 0.142rem;
         background-color: #E3B873;
         margin: 0;
-        margin-left: 2.14rem; }
+        margin-left: 2.2rem; }
+    .section-title__heading--primary {
+      margin-bottom: 1.55rem; }
     .section-title__heading--activity::after {
       margin-left: 6rem;
       width: 6.57rem;
@@ -444,12 +452,12 @@ template {
     text-align: center;
     line-height: 1.928rem;
     color: #363636;
-    margin-bottom: 2.857rem; }
+    margin-bottom: 3rem; }
   .section-title__text--projects {
     font-size: 1.285rem;
     line-height: 2.07rem;
     color: #ffffff;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
     max-width: 31.57rem; }
   .section-title__text--activity {
     font-size: 1.071rem;
@@ -461,7 +469,7 @@ template {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2.2rem; }
+    margin-bottom: 1.5rem; }
     .section-title__image::after, .section-title__image::before {
       content: '';
       width: 32px;
@@ -489,6 +497,9 @@ template {
     visibility: visible; }
   .scroll-up:hover {
     cursor: pointer; }
+
+.activity {
+  margin-top: -38rem; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -539,7 +550,11 @@ img {
   color: #E3B873; }
 
 .contacts__phone {
-  margin-right: 45px; }
+  margin-right: 45px;
+  -webkit-animation: bounce;
+  animation: bounce;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s; }
 
 .hero {
   position: relative;
@@ -569,7 +584,7 @@ img {
     position: relative;
     max-width: 45rem; }
   .hero__title {
-    margin-bottom: 1.1rem; }
+    margin-bottom: -0.9rem; }
   .hero__text {
     font-size: 1.57rem;
     max-width: 500px;
@@ -643,28 +658,29 @@ img {
   .title--primary {
     color: #E3B873; }
 
+.projects {
+  padding-bottom: 29rem; }
+
 .swiper-slide {
   display: flex;
   flex-wrap: wrap;
   margin: 0; }
   .swiper-slide__text {
     flex-basis: 50%;
-    margin-bottom: 2.428rem;
-    padding-bottom: 2rem; }
+    margin-bottom: 1rem;
+    padding-bottom: 1rem; }
+    .swiper-slide__text--short {
+      flex-basis: 31%; }
   .swiper-slide__heading {
     text-transform: uppercase;
     font-family: 'Yeseva One', cursive;
     font-size: 1.285rem;
     line-height: 1.78rem;
     color: #E3B873;
-    margin-bottom: 0.642rem; }
+    margin-bottom: 0.5rem; }
   .swiper-slide__value {
     font-size: 1.07rem;
-    color: #ffffff;
-    line-height: 1.428rem; }
-
-.swiper-pagination-bullets {
-  width: auto; }
+    color: #ffffff; }
 
 .swiper-pagination-bullet {
   background-color: rgba(255, 255, 255, 0.3); }
@@ -687,9 +703,111 @@ img {
 .swiper-button-next {
   background: url("../img/arrow-next.svg") no-repeat center; }
 
+.swiper__image {
+  max-width: 55rem;
+  max-height: 36rem;
+  margin: 0; }
+
+.swiper-wrapper {
+  margin-bottom: 6rem; }
+
 .swiper-container-horizontal > .swiper-pagination-bullets {
   width: auto;
   bottom: -2px; }
+
+.control__section-title {
+  margin-top: -30rem; }
+
+.control__video {
+  position: relative;
+  display: flex;
+  margin: auto;
+  max-width: 57.357rem;
+  min-height: 31rem;
+  background: url("../img/main-video.jpg") no-repeat center;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
+  margin-bottom: 4.64rem; }
+  .control__video::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); }
+
+.control__text {
+  margin: auto;
+  max-width: 40rem;
+  text-align: center;
+  font-size: 1.428rem;
+  line-height: 2.428rem;
+  margin-bottom: 4.5rem; }
+  .control__text::before {
+    content: '';
+    display: block;
+    margin: auto;
+    width: 3.928rem;
+    height: 0.11rem;
+    background-color: #E3B873;
+    border-radius: 30px;
+    margin-bottom: 2.3rem; }
+
+.control__form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 55rem;
+  margin: auto; }
+
+.control__input-group {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 1.5rem; }
+
+.control__label {
+  font-size: 1.071rem;
+  line-height: 1rem;
+  color: rgba(54, 54, 54, 0.5); }
+
+.control__input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+  color: #131313;
+  font-size: 1.285rem;
+  min-width: 16.5rem;
+  padding: 0.7rem 0; }
+  .control__input::-webkit-input-placeholder {
+    color: #131313;
+    font-size: 1.285rem;
+    line-height: 1.714rem; }
+  .control__input::-moz-placeholder {
+    color: #131313;
+    font-size: 1.285rem;
+    line-height: 1.714rem; }
+  .control__input:-ms-input-placeholder {
+    color: #131313;
+    font-size: 1.285rem;
+    line-height: 1.714rem; }
+  .control__input::-ms-input-placeholder {
+    color: #131313;
+    font-size: 1.285rem;
+    line-height: 1.714rem; }
+  .control__input::placeholder {
+    color: #131313;
+    font-size: 1.285rem;
+    line-height: 1.714rem; }
+
+.control__button {
+  padding: 1.428rem 4.5rem 0.928rem;
+  margin-bottom: 1.5rem; }
+
+.control__policy {
+  margin: auto; }
+
+.video__play {
+  position: relative;
+  margin: auto; }
 
 .types__section-title, .design__section-title {
   margin-bottom: 2.2rem; }
@@ -699,7 +817,7 @@ img {
   background-color: #ffffff;
   max-width: 23.6rem;
   margin: 0 auto;
-  margin-top: -9rem;
+  margin-top: -9.5rem;
   padding: 0.5rem 2.14rem 1.79rem 2.14rem;
   box-shadow: 10px 10px 20px rgba(19, 19, 19, 0.03); }
 
@@ -707,6 +825,8 @@ img {
   font-size: 1.285rem;
   line-height: 1.785rem;
   font-family: 'Yeseva One', cursive; }
+  .card__title--design {
+    margin-bottom: 0.7rem; }
 
 .card__list {
   margin: 0;
@@ -725,12 +845,13 @@ img {
   text-transform: uppercase;
   background-color: #E3B873;
   color: #ffffff;
-  padding: 1rem 2.7rem;
-  min-width: 17rem;
+  padding: 1.2rem 3.1rem;
   max-height: 3.857rem;
   position: absolute;
   left: 0;
   bottom: -1.9rem; }
+  .card__pricetag--design {
+    padding: 1.2rem 5.6rem 1.2rem 2.5rem; }
 
 .card__image {
   max-width: 100%; }
@@ -752,6 +873,39 @@ img {
   color: #ffffff;
   width: 24.07rem;
   margin: 0; }
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  min-width: 54.7rem;
+  margin-top: 6.8rem; }
+  .content__text {
+    width: 9.07rem;
+    margin-right: 10rem; }
+    .content__text:last-of-type {
+      margin-right: 0; }
+  .content__heading {
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.071rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 1.21rem; }
+    .content__heading::after {
+      content: '';
+      width: 1.5rem;
+      height: 0.1rem;
+      background-color: #E3B873;
+      position: absolute;
+      margin-top: 1.25rem;
+      margin-left: -1.4rem; }
+  .content__value {
+    font-size: 1.071rem;
+    color: #ffffff;
+    margin-bottom: 2.57rem; }
+
+.row--activity {
+  margin-top: 30rem; }
 
 .modal {
   opasity: 0;
