@@ -3,7 +3,8 @@
   border: none
   border-radius: 2px
   text-transform: uppercase
-  font-size: 0.93rem
+  font-size: 1rem
+  font-family: 'Futura Demi', sans-serif
   &:hover
     cursor: pointer
     animation: tada
@@ -43,6 +44,9 @@
   &__label
     display: flex
     align-items: center
+    font-size: 1.142rem
+    &--center
+      justify-content: center
     &::before
       content: ''
       width: 18px
@@ -114,6 +118,22 @@
         color: $light
         margin-bottom: 1.285rem
         text-transform: uppercase
+      &--team
+        line-height: 2.428rem
+        max-width: 40.57rem
+        margin: auto
+        &::before
+          content: ''
+          display: block
+          margin: auto
+          width: 55px
+          height: 2px
+          background-color: $primary
+          margin-bottom: 1.214rem
+      &--customs
+        margin-bottom: 13rem
+      &--light
+        color: $light
     &__image
       display: flex
       justify-content: center
