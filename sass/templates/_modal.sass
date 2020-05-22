@@ -19,7 +19,7 @@
   &__dialog
     position: relative
     background: $dark url('../img/bg-lines.svg') no-repeat center / 130%
-    height: 38rem
+    min-height: 38rem
     width: 36.142rem
     padding: 2.357rem 3.5rem 1.928rem
     color: $light
@@ -45,10 +45,12 @@
     flex-direction: column
   &__label
   &__input
-    margin-bottom: 3.428rem
-    padding: 0.7rem 0
-    &:last-of-type
-      margin-bottom: 1rem
+    &-group
+      display: flex
+      flex-direction: column
+      margin-bottom: 3.428rem
+      &:last-of-type
+        margin-bottom: 1rem
   &__policy
     margin-bottom: 2.5rem
   &__button
