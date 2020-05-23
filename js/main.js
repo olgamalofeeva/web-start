@@ -61,7 +61,8 @@ $(document).ready(function () {
       // строчное правило
       userName: {
         required: true,
-        minlength: 2
+        minlength: 2,
+        maxlength: 15
       },
       userPhone: "required",
       // правило объект (блок)
@@ -90,10 +91,9 @@ $(document).ready(function () {
       // строчное правило
       userName: {
         required: true,
-        minlength: 2
+        minlength: 2,
+        maxlength: 15
       },
-      userPhone: "required",
-      // правило объект (блок)
       userEmail: {
         required: true,
         email: true
@@ -105,7 +105,6 @@ $(document).ready(function () {
       minlength: "Имя не короче двух букв",
       maxlength: "Имя не длиннее 15 букв"
     },
-    userPhone: "Заполните поле",
     userEmail: {
       required: "Обязательно введите email",
       email: "Введите в формате name@domain.com"
@@ -119,13 +118,14 @@ $(document).ready(function () {
       // строчное правило
       userName: {
         required: true,
-        minlength: 2
+        minlength: 2,
+        maxlength: 15
       },
       userPhone: "required",
       // правило объект (блок)
-      userEmail: {
+      userQuestion: {
         required: true,
-        email: true
+        minlength: 2
       }
     },// сообщения
   messages: {
@@ -135,9 +135,8 @@ $(document).ready(function () {
       maxlength: "Имя не длиннее 15 букв"
     },
     userPhone: "Заполните поле",
-    userEmail: {
-      required: "Обязательно введите email",
-      email: "Введите в формате name@domain.com"
+    userQuestion: {
+      required: "Заполните поле",
     }
   }
   });
