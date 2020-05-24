@@ -19,6 +19,24 @@ $(document).ready(function () {
     }
 });
 
+  var thanks = $('.thanks'),
+      thanksBtn = $('[data-toggle=thanks]'),
+      closeThanksBtn = $('.thanks__close');
+  
+  thanksBtn.on('click', function () {
+    modal.removeClass('modal--visible');
+  }); 
+
+  closeThanksBtn.on('click', function () {
+    thanks.toggleClass('thanks--visible');
+  });
+  $(document).keypress(function (e) {
+    if (e.keyCode == 27) {
+      thanks.toggleClass('thanks--visible');
+    }
+});
+
+
   $(window).scroll(function () {
     if ($(window).scrollTop() > 500) {
       btnUp.toggleClass('scroll-up--show');
@@ -82,8 +100,20 @@ $(document).ready(function () {
       required: "Обязательно введите email",
       email: "Введите в формате name@domain.com"
     }
-  }
+  },
+  submitHandler: function(form) {
+    $.ajax({
+      type: "POST",
+      url: "send.php",
+      data: $(form).serialize(),
+      success: function (response) {
+        $(form)[0].reset();
+        thanks.toggleClass('thanks--visible');
+      }
+    });
+    }
   });
+
   $('.control__form').validate({
     errorClass: "invalid",
     errorElement: "div",
@@ -109,7 +139,18 @@ $(document).ready(function () {
       required: "Обязательно введите email",
       email: "Введите в формате name@domain.com"
     }
-  }
+  },
+  submitHandler: function(form) {
+    $.ajax({
+      type: "POST",
+      url: "send.php",
+      data: $(form).serialize(),
+      success: function (response) {
+        $(form)[0].reset();
+        thanks.toggleClass('thanks--visible');
+      }
+    });
+    }
   });
   $('.footer__form').validate({
     errorClass: "invalid",
@@ -138,7 +179,18 @@ $(document).ready(function () {
     userQuestion: {
       required: "Заполните поле",
     }
-  }
+  },
+  submitHandler: function(form) {
+    $.ajax({
+      type: "POST",
+      url: "send.php",
+      data: $(form).serialize(),
+      success: function (response) {
+        $(form)[0].reset();
+        thanks.toggleClass('thanks--visible');
+      }
+    });
+    }
   });
 
 //маска для номера телефона
