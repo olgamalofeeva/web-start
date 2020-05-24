@@ -4,7 +4,7 @@
   .nav
     &__item
       margin-right: 1 rem
-@media screen and (max-width: 992px)
+@media screen and (max-width: 1024px)
   .nav
     display: none
   .hero
@@ -12,11 +12,43 @@
       display: none
     &__content
       margin: 0
+  .header
+    width: 100%
+    background-color: $dark
+    padding: 24px 0
+@media screen and (max-width: 768px) 
+  .nav
+    display: none
+  .hero
+    &__instagram
+      display: none
+    &__content
+      margin: 0
+  .header
+    background-color: $dark
+    padding: 0
+  .contacts
+    &__phone
+      margin: 0
+  .row
+    flex-direction: column
+    align-items: center
+    &--team
+      flex-direction: column
+  .types
+    &__card
+      margin-bottom: 5rem
+    &__text
+      padding-left: 0
+  .card
+    margin: 0
+    margin-bottom: 4rem
 @media screen and (max-width: 570px)
   .contacts
     &__phone
       color: $light
       text-decoration: none
+      margin-right: 0
     &__button
       display: none
   .title
@@ -32,24 +64,48 @@
       min-width: 22.86rem
       margin-bottom: 1.85rem
     &__scroll-down
+      display: none          
+  .footer
+    background: $dark
+    &__container
+      display: flex
+      flex-direction: column
+    &__wrap
+      background-color: $dark
+      max-width: 100%
+      margin: 0
+      padding: 0
+    &__input-group
+      flex-basis: 100%
+      margin-right: 0
+      &--short-width
+        margin-bottom: 4.5rem
+      &--full-width
+        margin-bottom: 0
+    &__policy
+      margin: 0
+      margin-left: -4rem
+      margin-bottom: 4.8rem
+    &__button
+      padding: 1.5rem 11rem 1.2rem
+      margin-bottom: 4.64rem
+    &__menu
       display: none
-@media screen and (max-height: 570px)     
-  .hero
-    &__scroll-down
-      display: none    
-@media screen and (max-width: 760px)
-  .row
-      flex-direction: column
-      align-items: center
-  .types
-    &__card
-      margin-bottom: 5rem
+    &__map
+      order: 1
+      max-width: 24.285rem
+      max-height: 18.214rem
+      margin: 0
+      margin-bottom: 3.157rem
     &__text
-      padding-left: 0
-@media screen and ( max-width: 760px)
-  .row
-    &--team
-      flex-direction: column
-  .card
-    margin: 0
-    margin-bottom: 4rem
+      order: 2
+    &__title
+      &--primary
+        line-height: 1.785rem
+        width: 100%
+    &__form
+      margin: 0
+@media screen and (max-width: 768px)
+ 
+@media screen and ( max-width: 768px)
+  
