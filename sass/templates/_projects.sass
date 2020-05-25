@@ -1,6 +1,5 @@
 .projects
   padding-bottom: 29rem
-.swiper
   &-slide
     display: flex
     flex-wrap: wrap
@@ -10,22 +9,17 @@
       margin-bottom: 1rem
       padding-bottom: 1rem
       &--short
-        flex-basis: 31%
+        flex-basis: 34.5%
     &__heading
       text-transform: uppercase
       font-family: 'Yeseva One', cursive
       font-size: 1.285rem
       line-height: 1.78rem
       color: $primary
-      margin-bottom: 0.5rem
+      margin-bottom: 0.4rem
     &__value
       font-size: 1.07rem
       color: $light
-  &-pagination
-    &-bullet
-      background-color: rgba($light,0.3)
-      &-active
-        background-color: $light
   &-button
     &-prev, &-next
       bottom: 0
@@ -41,12 +35,18 @@
     &-next
       background: url('../img/arrow-next.svg') no-repeat center
   &__image
-    max-width: 55rem
-    max-height: 36rem
+    min-width: 100%
+    min-height: 100%
     margin: 0
+    padding: 0
 .swiper
   &-wrapper
     margin-bottom: 6rem
+  &-pagination
+    &-bullet
+      background-color: rgba($light,0.3)
+      &-active
+        background-color: $light
 .swiper-container-horizontal>.swiper-pagination-bullets
   width: auto
   bottom: -2px

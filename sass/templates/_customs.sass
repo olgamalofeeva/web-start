@@ -1,11 +1,68 @@
 .customs
   padding-bottom: 20rem
+  margin-bottom: 10rem
+  &__heading
+    display: flex
   &__image
-    z-index: 99
     width: 5rem
     height: 5rem
     border-radius: 50%
-    background: $primary url('../img/custom-2.jpg') no-repeat center
-    margin-right: 5rem
+    margin-right: 2rem
+    &--icon-1
+      background: $primary url('../img/custom-2.jpg') no-repeat center / cover
+    &--icon-2
+      background: $primary url('../img/custom-1.jpg') no-repeat center / cover
+    &--icon-3
+      background: $primary url('../img/custom-3.jpg') no-repeat center / cover     
+.card
+  &__text
+    &--customs
+      min-width: 26.85rem
+      min-height: 30.571 
+      padding: 0 2.285rem 4rem 1.428rem
+  &__title
+    &--customs
+      font-size: 1.285rem
+  &__item
+    &--customs
+      font-size: 1.07rem
+      line-height: 1.928rem
+.box
+  display:flex
+  position: absolute
+  left: 0
+  bottom: -1rem 
+  &__pricetag
+    font-size: 1.214rem
+    font-family: 'Yeseva One', cursive
+    text-transform: uppercase
+    background-color: $primary
+    color: $light
+    padding: 1.2rem 1rem 1.2rem 5rem 
+    max-height: 3.857rem
+    margin-right: 0.1rem
+    &--left
+      &::before
+        content: ''
+        position: absolute
+        left: 1rem
+        top: -0.8rem
+        width: 3rem
+        height: 3rem
+        border: none
+        margin-right: 1rem
+        background: url('../img/btn-1.svg') no-repeat center
+    &--right
+      &::before
+        content: ''
+        position: absolute
+        left: 11rem
+        top: -0.8rem
+        width: 3rem
+        height: 3rem
+        border: none
+        margin-right: 1rem
+        background: url('../img/btn-2.svg') no-repeat center
 
+      
 

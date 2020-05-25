@@ -1,5 +1,5 @@
 $(document).ready(function () { 
-  
+
   var modal = $('.modal'),
       modalBtn = $('[data-toggle=modal]'),
       closeBtn = $('.modal__close'),
@@ -49,25 +49,45 @@ $(document).ready(function () {
     $('html, body').animate({scrollTop:0}, '500');
   });
 
-  var mySwiper = new Swiper ('.swiper-container', {
+  var mySwiper = new Swiper ('.projects-slider', {
     loop: true,
     
     pagination: {
-      el: '.swiper-pagination',
+      el: '.projects-pagination',
       type: 'bullets',
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.projects-button-next',
+      prevEl: '.projects-button-prev',
     }
   });
 
-  var next = $('.swiper-button-next'),
-      prev = $('.swiper-button-prev'),
-      bullets = $('.swiper-pagination');
+  var next = $('.projects-button-next'),
+      prev = $('.projects-button-prev'),
+      bullets = $('.projects-pagination');
 
   next.css('left', prev.width() + 10 + bullets.width() + 10);
   bullets.css('left', prev.width() + 10)
+
+  var mySwiperActivity = new Swiper ('.activity-slider', {
+    loop: true,
+    
+    pagination: {
+      el: '.activity-pagination',
+      type: 'bullets',
+    },
+    navigation: {
+      nextEl: '.activity-button-next',
+      prevEl: '.activity-button-prev',
+    }
+  });
+
+  var nextActivity = $('.activity-button-next'),
+      prevActivity = $('.activity-button-prev'),
+      bulletsActivity = $('.activity-pagination');
+
+  nextActivity.css('left', prevActivity.width() + 10 + bulletsActivity.width() + 10);
+  bulletsActivity.css('left', prevActivity.width() + 10)
 
   new WOW().init();
 
