@@ -7,7 +7,7 @@ $(document).ready(function () {
 
 
   modalBtn.on('click', function () {
-    modal.toggleClass('modal--visible');
+     modal.toggleClass('modal--visible');
   }); 
 
   closeBtn.on('click', function () {
@@ -20,12 +20,7 @@ $(document).ready(function () {
 });
 
   var thanks = $('.thanks'),
-      thanksBtn = $('[data-toggle=thanks]'),
       closeThanksBtn = $('.thanks__close');
-  
-  thanksBtn.on('click', function () {
-    modal.removeClass('modal--visible');
-  }); 
 
   closeThanksBtn.on('click', function () {
     thanks.toggleClass('thanks--visible');
@@ -94,7 +89,6 @@ $(document).ready(function () {
   //Валидвация формы
   $('.modal__form').validate({
     errorClass: "invalid",
-    errorElement: "div",
     rules: {
       // строчное правило
       userName: {
@@ -128,6 +122,7 @@ $(document).ready(function () {
       data: $(form).serialize(),
       success: function (response) {
         $(form)[0].reset();
+        modal.removeClass('modal--visible');
         thanks.toggleClass('thanks--visible');
       }
     });
@@ -136,7 +131,6 @@ $(document).ready(function () {
 
   $('.control__form').validate({
     errorClass: "invalid",
-    errorElement: "div",
     rules: {
       // строчное правило
       userName: {
@@ -144,9 +138,8 @@ $(document).ready(function () {
         minlength: 2,
         maxlength: 15
       },
-      userEmail: {
+      userPhone: {
         required: true,
-        email: true
       }
     },// сообщения
   messages: {
@@ -155,9 +148,8 @@ $(document).ready(function () {
       minlength: "Имя не короче двух букв",
       maxlength: "Имя не длиннее 15 букв"
     },
-    userEmail: {
-      required: "Обязательно введите email",
-      email: "Введите в формате name@domain.com"
+    userPhone: {
+      required: "Заполните поле",
     }
   },
   submitHandler: function(form) {
@@ -167,14 +159,15 @@ $(document).ready(function () {
       data: $(form).serialize(),
       success: function (response) {
         $(form)[0].reset();
+        modal.removeClass('modal--visible');
         thanks.toggleClass('thanks--visible');
       }
     });
     }
   });
+  
   $('.footer__form').validate({
     errorClass: "invalid",
-    errorElement: "div",
     rules: {
       // строчное правило
       userName: {
@@ -207,6 +200,7 @@ $(document).ready(function () {
       data: $(form).serialize(),
       success: function (response) {
         $(form)[0].reset();
+        modal.removeClass('modal--visible');
         thanks.toggleClass('thanks--visible');
       }
     });
@@ -251,4 +245,20 @@ ymaps.ready(function () {
   myMap.geoObjects
       .add(myPlacemark);
 });
+
+var player;
+$('.video__play').on('click', function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {
+    height: '465',
+    width: '100%',
+    videoId: 'RHzzLqJWqHs',
+    events: {
+      'onReady': videoPlay,
+    }
+  });
+})
+
+  function videoPlay(event) {
+    event.target.playVideo();
+  }
 });

@@ -8,6 +8,7 @@
   .nav
     display: none
   .hero
+    height: 60rem
     &__instagram
       display: none
     &__content
@@ -35,13 +36,24 @@
         &--short
           flex-basis: 50%
 @media screen and (max-width: 768px) 
+  .button
+    &:hover
+      animation: none
+    &--primary
+      &:hover
+        box-shadow: 0px 5px 15px rgba($primary, 0.2)
   .nav
     display: none
   .hero
+    height: 50rem
     &__instagram
       display: none
     &__content
       margin: 0
+    &__scroll-down
+      &:hover
+        animation: none
+        color: $light
   .header
     background-color: $dark
   .contacts
@@ -57,12 +69,14 @@
       padding-left: 0
   .card
     margin: 0
-    margin-bottom: 4rem
+    margin-bottom: 0
+    animation-delay: 0s
+    animation: none
   .card
     &__text
       display: flex
       flex-direction: column
-      margin-bottom: 9rem
+      margin-bottom: 2rem
   .col
     &-30
       width: 50%
@@ -78,7 +92,17 @@
   .card
     display: flex
     flex-direction: column
-    justify-content: center
+    justify-content: centeк
+    &__text
+      width: 20rem
+      &--team
+        width: 17rem
+      &--customs
+        display: flex
+        flex-direction: column
+        margin-bottom: 15rem
+  .team
+    background: $dark
   .section 
     &-title
       &__heading 
@@ -88,12 +112,19 @@
           margin-bottom: 1.571rem
           &::after
             display: none
+        &--mobile
+          color: $light
+          margin-top: 0
       &__text
         &--projects
           font-size: 1.3rem
           line-height: 1.8rem
           margin-right: 1rem
           margin-bottom: 1rem
+        &--design
+          color: $light
+        &--customs
+          color: $dark
   .swiper
     &-wrapper
       margin-bottom: 2.5rem
@@ -103,6 +134,14 @@
         padding: 0
         &--short
           flex-basis: 70%
+  .design
+    background: $dark
+  .customs
+    margin-bottom: -10rem
+  .footer
+    &__social
+      &:hover
+        animation: none
 @media screen and (max-width: 570px)
   .header
     position: absolute
@@ -131,6 +170,7 @@
       display: none          
   .footer
     background: $dark
+    margin-top: -5rem
     &__container
       display: flex
       flex-direction: column
@@ -193,12 +233,19 @@
           margin-bottom: 1.571rem
           &::after
             display: none
+        &--mobile
+          color: $light
+          margin-top: 0
       &__text
         &--projects
           font-size: 1.3rem
           line-height: 1.8rem
           margin-right: 1rem
           margin-bottom: 1rem
+        &--design
+          color: $light
+          font-size: 1rem
+          line-height: 1.428rem
   .swiper
     &-wrapper
       margin-bottom: 2.5rem
@@ -210,9 +257,87 @@
           flex-basis: 50%
   .customs
     display: none
+  .control
+    background: $dark
+    margin-top: -1rem
+    &__video
+      max-width: 26rem
+      min-height: 16rem
+      margin-bottom: 2rem
+    &__text
+      font-size: 1rem
+      line-height: 1.714rem
+      color: $light
+      &::before
+        margin-bottom: 1.5rem
+    &__form
+      display: flex
+      flex-basis: 100%
+      flex-direction: column
+    &__label
+      color: rgba($light, 0.5)
+    &__input
+      border-bottom: 1px solid rgba($light, 0.3)
+      color: $dark
+      font-size: 1.285rem
+      margin-bottom: 4rem
+      &::placeholder
+        color: $light
+        font-size: 1.285rem
+        line-height: 1.714rem
+    &__button
+      order: 2
+      margin-bottom: -7rem
+    &__policy
+      order: 1
+      margin: 0
+      color: $light
+      margin-bottom: 4rem
+  #control-user-phone
+    margin-bottom: 0
+  .card
+    &__text
+      max-width: 19.875rem
+      margin: 0
+      margin-top: -10rem
+    &__title
+      font-size: 1.07rem
+      margin-bottom: 0.7rem
+    &__item
+      font-size: 0.9rem
+      line-height: 1.57rem
+    &__pricetag
+      font-size: 1.07rem
+  .types
+    margin-bottom: 0
+  .design
+    background: $dark
+    margin-top: -5rem
+  .team
+    margin-top: -1rem
+    background: $dark
+    margin-bottom: 0
+  .card
+    &__text
+      &--team
+        margin: auto
+        margin-top: -5rem
+        width: 90%    
+    &__pricetag
+      &--team
+        font-size: 0.9rem
+        width: 100%
+  .thanks
+    &__title
+      font-size: 1rem
+    &__text
+      font-size: 0.8rem
 @media screen and (max-width: 320px)
   .header
     position: absolute
+  .menu
+    &__logo
+      margin-left: 2rem
   .contacts
     &__phone
       color: $light
@@ -237,6 +362,7 @@
       display: none          
   .footer
     background: $dark
+    margin-top: -5rem
     &__container
       display: flex
       flex-direction: column
@@ -263,9 +389,6 @@
       display: none
     &__map
       order: 1
-      max-width: 24.285rem
-      max-height: 18.214rem
-      margin: 0
       margin-bottom: 3.157rem
     &__text
       order: 2
@@ -296,18 +419,113 @@
           margin-bottom: 1.571rem
           &::after
             display: none
+        &--mobile
+          color: $light
+          margin-top: 0
       &__text
         &--projects
           font-size: 1rem
           line-height: 1.57rem
           margin-right: 1rem
           margin-bottom: 2.571rem
+        &--design
+          color: $light
+          font-size: 1rem
+          line-height: 1.428rem
+        &--team
+          display: none
   .swiper
     &-wrapper
       margin-bottom: 2.5rem
   .customs
     display: none
+  .projects
+    &-slide
+      &__text
+        &--short
+          flex-basis: 50%
+      &__heading
+        font-size: 1rem
+  .control
+    background: $dark
+    &__video
+      max-width: 24.28rem
+      min-height: 14.785rem
+      margin-bottom: 2rem
+    &__text
+      font-size: 1rem
+      line-height: 1.714rem
+      color: $light
+      &::before
+        margin-bottom: 1.5rem
+    &__form
+      display: flex
+      flex-basis: 100%
+      flex-direction: column
+    &__label
+      color: rgba($light, 0.5)
+    &__input
+      border-bottom: 1px solid rgba($light, 0.3)
+      color: $dark
+      font-size: 1.285rem
+      margin-bottom: 4rem
+      &::placeholder
+        color: $light
+        font-size: 1.285rem
+        line-height: 1.714rem
+    &__button
+      order: 2
+      margin-bottom: -7rem
+    &__policy
+      order: 1
+      margin: 0
+      color: $light
+      margin-bottom: 4rem
+  #control-user-phone
+    margin-bottom: 0
+  .card
+    &__text
+      max-width: 19.285rem
+      margin: 0
+      margin-top: -10rem
+    &__title
+      font-size: 1.07rem
+      margin-bottom: 0.7rem
+    &__item
+      font-size: 0.9rem
+      line-height: 1.57rem
+    &__pricetag
+      font-size: 1.07rem
+  .types
+    margin-bottom: 0
+  .design
+    background: $dark
+    padding-bottom: 0
+  .team
+    background: $dark
+    padding-bottom: 0
+    margin-bottom: 0
+    &__card
+      display: inline-block
+      margin-left: 2rem
+      margin-bottom: 3rem
+  .card
+    &__text
+      &--team
+        margin: auto
+        margin-top: -5rem
+    &__pricetag
+      &--team
+        font-size: 0.9rem 
+  .thanks
+    &__title
+      font-size: 1rem
+    &__text
+      font-size: 0.8rem
+    
 
 
 
-  
+
+
+    
