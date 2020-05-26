@@ -21,7 +21,7 @@
     <div class="container">
       <!-- блок -->
       <div class="menu">
-        <div class="logo menu__logo animate__animated animate__fadeInLeft animate__delay-0.1s">Repair Design Project</div>
+        <a href="#main" class="logo menu__logo animate__animated animate__fadeInLeft animate__delay-0.1s">Repair Design Project</a>
         <nav class="nav menu__nav">
           <!-- nav__link - элемент блока nav  -->
           <a href="#main" class="nav__item">Главная</a>
@@ -183,9 +183,9 @@
           <label for="control-user-phone" class="label control__label">Телефон</label>
           <input type="tel" class="input control__input" name="userPhone" id="control-user-phone" placeholder="Ваш номер телефона:">
           </div>
-          <button class="button button--primary control__button" data-toggle="thanks">Отправить</button>
+          <button class="button button--primary control__button" type="submit" disabled>Отправить</button>
           <div class="policy control__policy">
-            <input type="checkbox" name="policyCheckbox" id="policy-checkbox-control" class="policy__checkbox" checked>
+            <input type="checkbox" name="policyCheckbox" id="policy-checkbox-control" class="policy__checkbox">
             <label for="policy-checkbox-control" class="policy__label">я соглашаюсь с обработкой данных</label>
           </div>
           <!-- /.policy -->
@@ -614,11 +614,11 @@
             <input type="text" class="input footer__input" name="userQuestion" id="user-question" placeholder="Я хочу спросить:">
           </div>        
           <div class="policy footer__policy">
-            <input type="checkbox" name="policyCheckbox" id="policy-checkbox--footer" class="policy__checkbox" checked>
+            <input type="checkbox" name="policyCheckbox" id="policy-checkbox--footer" class="policy__checkbox">
             <label for="policy-checkbox--footer" class="policy__label policy__label--center">я соглашаюсь с обработкой данных</label>
           </div>
           <!-- /.policy -->
-          <button class="button button--primary footer__button" data-toggle="thanks">Отправить</button>
+          <button class="button button--primary footer__button" type="submit" disabled>Отправить</button>
         </form>
         <!-- /.form footer__form -->
       </div>
@@ -635,6 +635,7 @@
       </div>
       <!-- /.footer__text -->
       <div class="map footer__map" id="map">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Adcb7dcdd943da5195d13a42f64e970c165a542bc52667590deb6ac74790e650b&amp;width=100%25&amp;height=465&amp;lang=ru_RU&amp;scroll=false"></script>
       </div>
     </div>
     <div class="footer__menu">
@@ -679,11 +680,11 @@
           <input type="email" class="input modal__input" name="userEmail"  id="user-email" placeholder="Ваш email:">
         </div>       
         <div class="policy modal__policy">
-          <input type="checkbox" name="policyCheckbox" id="policy-checkbox" class="policy__checkbox" checked>
+          <input type="checkbox" name="policyCheckbox" id="policy-checkbox" class="policy__checkbox">
           <label for="policy-checkbox" class="policy__label">я соглашаюсь с обработкой данных</label>
         </div>
         <!-- /.policy -->
-        <button class="button button--primary modal__button">Отправить заявку</button>
+        <button class="button button--primary modal__button" type="submit" disabled>Отправить заявку</button>
       </form>
       <!-- /.form modal__form -->
     </div>

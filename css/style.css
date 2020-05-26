@@ -568,6 +568,7 @@ img {
   margin-left: -2rem; }
 
 .logo {
+  text-decoration: none;
   font-size: 1.075rem;
   font-weight: 600;
   color: #E3B873;
@@ -1445,7 +1446,7 @@ img {
     .hero__content {
       max-width: 26rem; }
     .hero__text {
-      font-size: 1.6rem;
+      font-size: 1.3rem;
       margin-bottom: 2.28rem; }
     .hero__button {
       min-width: 26rem;

@@ -86,7 +86,32 @@ $(document).ready(function () {
 
   new WOW().init();
 
-  //Валидвация формы
+  //Валидация checkbox
+  $('#policy-checkbox').on('change', function () {
+    if ( $('#policy-checkbox').prop('checked') ) {
+        $('.modal__button').attr('disabled', false);
+    } else {
+        $('.modal__button').attr('disabled', true);
+    }
+  });
+
+  $('#policy-checkbox--footer').on('change', function () {
+    if ( $('#policy-checkbox--footer').prop('checked') ) {
+        $('.footer__button').attr('disabled', false);
+    } else {
+        $('.footer__button').attr('disabled', true);
+    }
+  });
+
+  $('#policy-checkbox-control').on('change', function () {
+    if ( $('#policy-checkbox-control').prop('checked') ) {
+        $('.control__button').attr('disabled', false);
+    } else {
+        $('.control__button').attr('disabled', true);
+    }
+  });
+
+//Валидвация формы
   $('.modal__form').validate({
     errorClass: "invalid",
     rules: {
@@ -212,39 +237,6 @@ $(document).ready(function () {
 $('[type=tel]').mask('+7(000) 00-00-000', {placeholder: "+7 (___) __-__-___"});
 
 //создаем yandex карту
-
-ymaps.ready(function () {
-  var myMap = new ymaps.Map('map', {
-          center: [55.732692, 37.562344],
-          zoom: 9
-      }, {
-          searchControlProvider: 'yandex#search'
-      }),
-
-      // Создаём макет содержимого.
-      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-          '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-      ),
-
-      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-          hintContent: 'Наш офис',
-          balloonContent: 'Вход со двора'
-      }, {
-          // Опции.
-          // Необходимо указать данный тип макета.
-          iconLayout: 'default#image',
-          // Своё изображение иконки метки.
-          iconImageHref: 'img/location.png',
-          // Размеры метки.
-          iconImageSize: [32, 32],
-          // Смещение левого верхнего угла иконки относительно
-          // её "ножки" (точки привязки).
-          iconImageOffset: [-5, -38]
-      });
-
-  myMap.geoObjects
-      .add(myPlacemark);
-});
 
 var player;
 $('.video__play').on('click', function onYouTubeIframeAPIReady() {
