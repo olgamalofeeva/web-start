@@ -1,10 +1,13 @@
 $(document).ready(function () { 
+  
+  new WOW().init();
 
   var modal = $('.modal'),
       modalBtn = $('[data-toggle=modal]'),
       closeBtn = $('.modal__close'),
-      btnUp = $('.scroll-up');
-
+      modalDialog = $('.modal__dialog'),
+      btnUp = $('.scroll-up'),
+      scrollDown = $('.hero__scroll-down');
 
   modalBtn.on('click', function () {
      modal.toggleClass('modal--visible');
@@ -13,11 +16,17 @@ $(document).ready(function () {
   closeBtn.on('click', function () {
     modal.toggleClass('modal--visible');
   });
+  
   $(document).keypress(function (e) {
-    if (e.keyCode == 27) {
+    if (e.keyCode === 27) {
       modal.toggleClass('modal--visible');
     }
 });
+  modal.on('click', function(e){
+    if(!(modalDialog.contains(e.target))) {
+      modal.toggleClass('modal--visible');
+    }
+  })
 
   var thanks = $('.thanks'),
       closeThanksBtn = $('.thanks__close');
@@ -43,6 +52,11 @@ $(document).ready(function () {
     e.preventDefault();
     $('html, body').animate({scrollTop:0}, '500');
   });
+  scrollDown.on("click", function (e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop:700}, '1500');
+  });
+    
 
   var mySwiper = new Swiper ('.projects-slider', {
     loop: true,
@@ -61,73 +75,25 @@ $(document).ready(function () {
       prev = $('.projects-button-prev'),
       bullets = $('.projects-pagination');
 
-  next.css('left', prev.width() + 10 + bullets.width() + 10);
-  bullets.css('left', prev.width() + 10)
+  next.css('left', prev.width() + 15 + bullets.width() + 15);
+  bullets.css('left', prev.width() + 15)
 
-  var mySwiperActivity = new Swiper ('.activity-slider', {
-    loop: true,
-    
-    pagination: {
-      el: '.activity-pagination',
-      type: 'bullets',
-    },
-    navigation: {
-      nextEl: '.activity-button-next',
-      prevEl: '.activity-button-prev',
-    }
-  });
-
-  var nextActivity = $('.activity-button-next'),
-      prevActivity = $('.activity-button-prev'),
-      bulletsActivity = $('.activity-pagination');
-
-  nextActivity.css('left', prevActivity.width() + 10 + bulletsActivity.width() + 10);
-  bulletsActivity.css('left', prevActivity.width() + 10)
-
-  new WOW().init();
-
-  //Валидация checkbox
-  $('#policy-checkbox').on('change', function () {
-    if ( $('#policy-checkbox').prop('checked') ) {
-        $('.modal__button').attr('disabled', false);
-    } else {
-        $('.modal__button').attr('disabled', true);
-    }
-  });
-
-  $('#policy-checkbox--footer').on('change', function () {
-    if ( $('#policy-checkbox--footer').prop('checked') ) {
-        $('.footer__button').attr('disabled', false);
-    } else {
-        $('.footer__button').attr('disabled', true);
-    }
-  });
-
-  $('#policy-checkbox-control').on('change', function () {
-    if ( $('#policy-checkbox-control').prop('checked') ) {
-        $('.control__button').attr('disabled', false);
-    } else {
-        $('.control__button').attr('disabled', true);
-    }
-  });
-
-//Валидвация формы
   $('.modal__form').validate({
-    errorClass: "invalid",
     rules: {
-      // строчное правило
       userName: {
         required: true,
         minlength: 2,
         maxlength: 15
       },
       userPhone: "required",
-      // правило объект (блок)
       userEmail: {
         required: true,
         email: true
+      },
+      policyCheckbox: {
+        required: true
       }
-    },// сообщения
+    },
   messages: {
     userName: {
       required: "Заполните поле",
@@ -138,6 +104,9 @@ $(document).ready(function () {
     userEmail: {
       required: "Обязательно введите email",
       email: "Введите в формате name@domain.com"
+    },
+    policyCheckbox: {
+      required: "Вам нужно согласиться с обработкой данных"
     }
   },
   submitHandler: function(form) {
@@ -157,24 +126,25 @@ $(document).ready(function () {
   $('.control__form').validate({
     errorClass: "invalid",
     rules: {
-      // строчное правило
       userName: {
         required: true,
         minlength: 2,
         maxlength: 15
       },
-      userPhone: {
-        required: true,
+      userPhone: "required",
+      policyCheckboxControl: {
+        required: true
       }
-    },// сообщения
+    },
   messages: {
     userName: {
       required: "Заполните поле",
       minlength: "Имя не короче двух букв",
       maxlength: "Имя не длиннее 15 букв"
     },
-    userPhone: {
-      required: "Заполните поле",
+    userPhone: "Заполните поле",
+    policyCheckboxControl: {
+      required: "Вам нужно согласиться с обработкой данных"
     }
   },
   submitHandler: function(form) {
@@ -194,19 +164,20 @@ $(document).ready(function () {
   $('.footer__form').validate({
     errorClass: "invalid",
     rules: {
-      // строчное правило
       userName: {
         required: true,
         minlength: 2,
         maxlength: 15
       },
       userPhone: "required",
-      // правило объект (блок)
       userQuestion: {
         required: true,
         minlength: 2
+      },
+      policyCheckboxFooter: {
+        required: true
       }
-    },// сообщения
+    },
   messages: {
     userName: {
       required: "Заполните поле",
@@ -216,6 +187,9 @@ $(document).ready(function () {
     userPhone: "Заполните поле",
     userQuestion: {
       required: "Заполните поле",
+    },
+    policyCheckboxFooter: {
+      required: "Вам нужно согласиться с обработкой данных"
     }
   },
   submitHandler: function(form) {
@@ -232,11 +206,7 @@ $(document).ready(function () {
     }
   });
 
-//маска для номера телефона
-
 $('[type=tel]').mask('+7(000) 00-00-000', {placeholder: "+7 (___) __-__-___"});
-
-//создаем yandex карту
 
 var player;
 $('.video__play').on('click', function onYouTubeIframeAPIReady() {
@@ -253,4 +223,18 @@ $('.video__play').on('click', function onYouTubeIframeAPIReady() {
   function videoPlay(event) {
     event.target.playVideo();
   }
+
+$("#menu").on("click","a", function (e) {
+    e.preventDefault();
+    var id  = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 1500);
+});
+$("#footerMenu").on("click","a", function (event) {
+event.preventDefault();
+var id  = $(this).attr('href'),
+top = $(id).offset().top;
+$('body,html').animate({scrollTop: top}, 1500);
+});
+
 });

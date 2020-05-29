@@ -41,11 +41,7 @@ function buildCSS(done) {
 
 function buildJS(done) {
   src(['js/**.js', '!js/**.min.js'])
-    .pipe(minify({
-      ext:{
-          min:'.js'
-      },
-      exclude: ['tasks']}))
+    .pipe(minify())
     .pipe(dest('dist/js/'));
     src('js/**.min.js').pipe(dest('dist/js/'));
   done()
@@ -73,7 +69,12 @@ function fonts(done) {
 }
 
 function imagemin(done) {
-  src('img/**/**')
+  src('img/*.jpg/*.jpg')
+    .pipe(tinypng({
+      key: 'HQdSgqf132jzDq0N84M7FRHtKxt5rQDF'
+  }))
+    .pipe(dest('dist/img/'));
+  src('img/*.png')
     .pipe(tinypng({
       key: 'HQdSgqf132jzDq0N84M7FRHtKxt5rQDF'
   }))
@@ -89,5 +90,6 @@ function imagemin(done) {
     .pipe(dest('dist/img/'));
   done()
 }
+
 exports.serve = bs;
 exports.build = series(buildCSS, buildJS, html, php, fonts, imagemin)

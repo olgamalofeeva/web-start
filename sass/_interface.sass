@@ -5,6 +5,7 @@
   text-transform: uppercase
   font-size: 1rem
   font-family: 'Futura Demi', sans-serif
+  outline: none
   &:hover
     cursor: pointer
     animation: tada
@@ -30,6 +31,7 @@
     border-bottom: 1px solid rgba($light, 0.15)
     color: $light
     font-size: 1.285rem
+    outline: none
     &::placeholder
       color: $light
       font-size: 1.285rem
@@ -74,10 +76,13 @@
     &__heading 
       text-transform: uppercase
       font-family: 'Yeseva One', cursive
+      font-style: normal
+      font-weight: normal
       font-size: 1.428rem
       margin-bottom: 1rem
       font-style: normal
       font-weight: normal
+      color: $dark
       &--primary, &--activity
         font-size: 1.928rem
         color: $primary
@@ -97,6 +102,8 @@
           margin-left: 2.2rem
       &--primary
         margin-bottom: 1.55rem
+      &--light
+        color: $light
       &--activity
          &::after
            margin-left: 6rem
@@ -136,9 +143,7 @@
           background-color: $primary
           margin-bottom: 1.214rem
       &--customs
-        margin-bottom: 13rem
-      &--light
-        color: $light
+        margin-bottom: 14.5rem
     &__image
       display: flex
       justify-content: center
@@ -149,21 +154,20 @@
         width: 32px
         height: 2px
         background-color: $primary
-        margin: 0 10px
-      
+        margin: 0 10px    
 .scroll-up
   display: inline-block
   position: fixed
-  bottom: 2.5rem
-  right: 2.5rem
+  bottom: 1.5rem
+  right: 0
   margin: 2rem
-  width: 3rem
-  height: 3rem
+  width: 2.5rem
+  height: 2.5rem
   border: 2px solid $primary
   border-radius: 50%
   background: url(../img/scroll-up.svg) no-repeat center
   transition: background-color .3s, opacity .5s, visibility .5s
-  z-index: 1000
+  z-index: 1900
   opasity: 0
   visibility: hidden
   &--show
@@ -174,9 +178,26 @@
 .activity
   margin-top: -38rem
 label
+  &.error
+    color: tomato
+    font-size: 1.1rem
+    position: absolute
+    bottom: -1.5rem
+    left: 0
+input
+  &.error
+    border-bottom: 1px solid tomato
+input
+  &.invalid
+    border-bottom: 1px solid tomato
+label
   &.invalid
     color: tomato
-    border-top: 1px solid tomato
+    font-size: 1.1rem
+    position: absolute
+    top: 4.2rem
+    left: 0
+
   
 
   
